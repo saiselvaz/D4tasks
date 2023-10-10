@@ -1,0 +1,89 @@
+// 1. print odd in an array 
+// Using an anonymous function
+(function() {
+    let array = [1, 2, 3, 4, 5];
+    let oddNumbers = array.filter(function(num) {
+       return num % 2 !== 0;
+    });
+    console.log(oddNumbers);
+   })();
+   
+
+// Using an anonymous function
+(function() {
+    let stringArray = ['hello', 'iam', 'siva'];
+    let titleCasedArray = stringArray.map(function(str) {
+      return str.charAt(0).toUpperCase() + str.slice(1);
+    });
+    console.log(titleCasedArray);
+  })();
+ 
+//   c. sum of all numbers in an array
+// Using an anonymous function
+(function() {
+    let numbers = [1, 2, 3, 4, 5];
+    let sum = numbers.reduce(function(total, num) {
+      return total + num;
+    }, 0);
+    console.log(sum);
+  })();
+
+//   d. return all the prime numbers in an array
+// Using an anonymous function
+(function() {
+    let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    let primeNumbers = numbers.filter(function(num) {
+      if (num <= 1) return false;
+      for (let i = 2; i <= Math.sqrt(num); i++) {
+        if (num % i === 0) return false;
+      }
+      return true;
+    });
+    console.log(primeNumbers);
+  })();
+
+  // f. return all the palindromes in an array
+// Using an anonymous function
+
+(function() {
+    let words = [ 'level', 'madam', 'mom', 'noon', 'rotor'];
+    let palindromes = words.filter(function(word) {
+      return word === word.split('').reverse().join('');
+    });
+    console.log(palindromes);
+  })();
+
+g. remove the duplicates from an array
+
+// Using an anonymous function
+(function() {
+  const arr = [1, 2, 3, 4, 5, 1, 2, 3];
+  const removeDuplicates = (arr) => {
+    const seen = new Set();
+    const uniqueArr = [];
+    for (const element of arr) { 
+      if (!seen.has(element)) {
+        seen.add(element);
+        uniqueArr.push(element);
+      }
+    }
+    return uniqueArr;
+  };
+  console.log(removeDuplicates(arr));
+})();
+
+h. rotate an array by k times
+
+// Using an anonymous function
+(function() {
+  const arr = [1, 2, 3, 4, 5];
+  const k = 2;
+  const rotateArray = (arr, k) => {
+    const rotatedArr = [];
+    for (let i = 0; i < arr.length; i++) {
+      rotatedArr[(i + k) % arr.length] = arr[i];
+    }
+    return rotatedArr;
+  };
+  console.log(rotateArray(arr, k));
+})();
