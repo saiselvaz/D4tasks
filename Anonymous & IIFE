@@ -11,7 +11,7 @@
 
 // Using an anonymous function
 (function() {
-    let stringArray = ['hello', 'iam', 'siva'];
+    let stringArray = ['hello', 'iam', 'sai'];
     let titleCasedArray = stringArray.map(function(str) {
       return str.charAt(0).toUpperCase() + str.slice(1);
     });
